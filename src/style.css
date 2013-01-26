@@ -1,0 +1,316 @@
+/*********************************************************
+beyondskins.ploneconf.site - Theme for Ploneconf 2013
+Simples Consultoria - www.simplesconsultoria.com.br
+*********************************************************/
+
+/* reset */
+* {margin:0; padding:0; list-style:none; vertical-align:baseline;}
+
+/****************** Basic Stuff ******************/
+
+/* Colors and fonts */
+body {
+    background-color: #0079b9;
+    color: #fff; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 62.5%; /* with this 1em = 10px */
+}
+a:link, 
+#content a:link, 
+dl.portlet a:link {
+    color:#eaffff;
+}
+a:visited,
+#content a:visited, 
+dl.portlet a:visited {
+    color: #eaffff;
+}
+#content a:hover, 
+dl.portlet a:hover {
+    color: #fff !important;
+}
+.state-published {
+    color:#eaffff !important;
+}
+h1, h2, h3, h4, h5, h6 {
+   color: #eaffff;
+}
+h1, h2, h3 {
+    margin: 0.5em 0 0.5em;
+}
+p {
+    line-height: 1.8em; 
+	 margin: 0 0 1em 0;
+}
+#wrapper { 
+    max-width:720px; 
+    margin: 0 auto; 
+    width: 80%;
+    font-size: 1.2em;}
+#main {
+    background:#0079b9; 
+    font-size: 1.3em; 
+    padding: 1em 0;
+}
+div.position-0 {
+    margin-left: -100%;
+}
+
+
+/****************** HEADER ******************/
+
+/* logo */
+#logo {
+    padding: 1%; 
+	 width: 100%;
+}
+#logo img {
+    max-width:100%;
+}
+#logo a {
+    display:block; 
+	 width:100%;
+	 text-align: center;
+}
+
+/* Personal tools */
+#portal-personaltools {
+    font-size: 1.2em;
+	 background: #336699;
+}
+#portal-personaltools dd {
+	background: #336699;
+}
+
+/* Main navigation */
+#nav {
+    background: #0079b9;
+	 text-align: center;
+	 border-bottom: 1px solid #238dc3;
+	 border-top: 1px solid #238dc3;
+}
+#nav ul {
+    background: #0079b9;	
+    color: #fff;
+    font-size: 1.4em;
+    border-bottom: 1px solid #0079b9;
+}
+#nav a {
+    color: #fff; 
+    padding: 1em; 
+    text-decoration: none; 
+    min-width: 3em; 
+    display: inline-block;
+}
+#nav a:hover, 
+#nav li.selected a {
+    background: #0073B4;
+}
+
+
+/****************** CONTENT ******************/
+
+/* Text styles */
+#content .documentDescription, #content #description,
+#content div.documentByLine,
+#content .discreet, #sidebar .discreet {
+	color: #eaffff;
+}
+.pb-ajax, .pb-image, .overlay iframe {
+	background-color: #336699;
+}
+
+.breadcrumbSeparator {
+    color: #eaffff;
+}
+
+.hidden {
+    display: none;
+} 
+.clear {
+    clear: both;
+}
+.pb-ajax, .pb-image, .overlay iframe {
+    font-size: 1.4em;
+}
+.portlet img, #content img {
+    max-width:100%;
+}
+
+table.grid td, table.grid th {
+    border: 1px solid #eaffff;
+    padding: 0.5em;
+}
+table.listing th {
+	background: #eaffff;
+}
+
+/* lists */
+#content li, dl.portlet li {
+    display: list-item;
+    line-height: 1.5em;
+    list-style: square outside;
+    margin-bottom: 0.25em;
+}
+#content ol li, dl.portlet ol li {
+    list-style: decimal outside;
+}
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    list-style: none;
+}
+
+/****************** PORTLETS ********************/
+dl.portlet dt, div.portletAssignments div.portletHeader {
+	background: #336699;
+	color: #fff;
+}
+
+.portlet-static-fotos img {
+	border-radius: 5px; 
+   -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px; 
+   border: 0px solid #FFFFFF;
+}
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    border-bottom: 0.1em solid #238dc3;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+    background-color: #238dc3;
+    border-left: none;
+	 padding-left: 1em;
+}
+
+div.managePortletsLink, a.managePortletsFallback {
+	background: #336699;
+}
+
+dl.portalMessage {
+	color: #000; 
+}
+
+select {
+	max-width: 100%;
+}
+
+/****************** FOOTER ******************/
+
+#footer {
+    background: #0079b9; 
+	 color: #eaffff;
+	 border-bottom: 1px solid #238dc3;
+	 border-top: 1px solid #238dc3;
+}
+#footer a:link {
+    color:#eaffff;
+}
+#footer a:visited {
+    color:#eaffff;
+}
+#footer a:hover {
+    color: #fff !important;
+}
+#footer {
+    clear: left; 
+	 padding: 1em 0;
+}
+
+/* Site Actions */
+#portal-siteactions {
+    text-align: left; 
+	 display:inline;
+}
+
+
+/****************** RESPONSIVE DESIGN MAGIC ******************/
+
+#searchbt, #nav #seletor {display:none;}
+#nav #seletor {color: #fff;}
+
+@media screen and (max-width: 768px) {
+
+	#wrapper {max-width: 100%;}
+	#logo {min-width:140px;}	
+	
+	/*Columns*/
+	#portal-column-one, 
+	#portal-column-two,
+	#portal-column-content {clear: both; width: 97.75%; margin-left: -98.875%;}
+
+	/*Search*/
+    #portal-searchbox  {display:none;}
+
+	/*Global navigation*/
+	#nav {padding:0;width:100%;
+	}
+	
+	#searchbt {display:block; float:right;width:14%;}
+	
+	#searchbt a {
+		display:block;
+		text-indent: -900000px;
+		padding: 1em;
+		margin-top: 4%;
+		background:transparent url(search-ico.png) no-repeat center center;
+	}
+	
+	#nav #seletor {
+		display:block;
+		padding:1em;
+		width:80%;
+		background:url("sections-ico.png") no-repeat 97% 60%;
+	 }
+	
+	#nav li {display: none;}
+	
+	#nav:hover li {
+		display: block;
+		width:100%; 
+		border-top:1px solid #ffffff;;
+		display:block !Important;
+		padding:0;
+	}
+	
+	#nav ul {
+		width:97.5%;
+		margin:0;
+		padding:0;
+	}
+	
+	#nav:hover li a {
+		color: #ffffff;;
+		width:100%;
+		padding:0 2.5%;
+		line-height: 3em;
+      display: block;
+      width: 95% !important;
+	}
+	
+	#nav:hover li:hover {background: #eaffff;}
+	#nav:hover li a:hover,
+	#nav:hover li.selected a {background: transparent;}
+	
+.overlay.overlay-ajax {top: 10px !Important;}
+.overlay.overlay-ajax input.searchPage {
+    font-size: 200% !important;
+    width: 90%;
+    margin-bottom:1em;
+}
+.overlay.overlay-ajax input.searchPage.searchButton {width:auto;}
+.overlay.overlay-ajax #searchform .discreet {text-align:left;}
+.overlay.overlay-ajax #content-core strong {display:none;}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#portal-breadcrumbs {display:none;}
+	
+	#portal-searchbox {
+	    float: none;
+        width:80%;
+		clear:both;
+		margin: 0 auto 2%;
+   }
+}
