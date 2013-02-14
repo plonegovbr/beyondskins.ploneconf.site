@@ -8,33 +8,50 @@ Simples Consultoria - www.simplesconsultoria.com.br
 
 /****************** Basic Stuff ******************/
 
+@font-face {
+    font-family: 'DejaVuSansCondensed';
+    src: url('../font/DejaVuSansCondensed-webfont.eot');
+    src: url('../font/DejaVuSansCondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DejaVuSansCondensed-webfont.woff') format('woff'),
+         url('../font/DejaVuSansCondensed-webfont.ttf') format('truetype'),
+         url('../font/DejaVuSansCondensed-webfont.svg#DejaVuSansCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /* Colors and fonts */
 body {
-    background-color: #0079b9;
-    color: #fff; 
-    font-family: Arial, Helvetica, sans-serif; 
+    background: #fff url(src/background.jpg);
+    color: #000; 
+    font-family: 'DejaVuSansCondensed', Arial, Helvetica, sans-serif; 
     font-size: 62.5%; /* with this 1em = 10px */
 }
 a:link, 
 #content a:link, 
 dl.portlet a:link {
-    color:#eaffff;
+    color:#000;
 }
 a:visited,
 #content a:visited, 
 dl.portlet a:visited {
-    color: #eaffff;
+    color: #000;
 }
 #content a:hover, 
 dl.portlet a:hover {
-    color: #fff !important;
+    color: #000 !important;
 }
 .state-published {
-    color:#eaffff !important;
+    color:#000 !important;
 }
-h1, h2, h3, h4, h5, h6 {
-   color: #eaffff;
+h1, h2 {
+   color: #286fb2;
 }
+h3 {
+	color: #336600;
+}
+
 h1, h2, h3 {
     margin: 0.5em 0 0.5em;
 }
@@ -43,14 +60,14 @@ p {
 	 margin: 0 0 1em 0;
 }
 #wrapper { 
-    max-width:720px; 
     margin: 0 auto; 
-    width: 80%;
-    font-size: 1.2em;}
+    width: 100%;
+    font-size: 1.2em;
+}
 #main {
-    background:#0079b9; 
+    background:transparent; 
     font-size: 1.3em; 
-    padding: 1em 0;
+    padding: 2em;
 }
 div.position-0 {
     margin-left: -100%;
@@ -59,10 +76,14 @@ div.position-0 {
 
 /****************** HEADER ******************/
 
+#header {
+	background-color: #fff;
+}
+
 /* logo */
 #logo {
-    padding: 1%; 
-	 width: 100%;
+	 width: 33.2%;
+	 float: left;
 }
 #logo img {
     max-width:100%;
@@ -73,31 +94,52 @@ div.position-0 {
 	 text-align: center;
 }
 
+.header-photos,
+#header-text {
+	width: 33.2%;
+	float: left;
+	margin-bottom: 0.2%;
+}
+
+#photo01,
+#photo04 {
+	margin-right: 0.2%;
+	margin-left: 0.2%;
+}
+
+.header-photos img,
+#header-text img {
+	width: 100%;
+}
+
 /* Personal tools */
 #portal-personaltools {
     font-size: 1.2em;
 	 background: #336699;
+	 position: absolute;
 }
 #portal-personaltools dd {
 	background: #336699;
+}
+#portal-personaltools a {
+	color: #fff;
 }
 
 /* Main navigation */
 #nav {
     background: #0079b9;
-	 text-align: center;
 	 border-bottom: 1px solid #238dc3;
-	 border-top: 1px solid #238dc3;
+	 clear: left;
 }
 #nav ul {
     background: #0079b9;	
     color: #fff;
-    font-size: 1.4em;
+    font-size: 1.6em;
     border-bottom: 1px solid #0079b9;
 }
 #nav a {
     color: #fff; 
-    padding: 1em; 
+    padding: 0.5em 1em;
     text-decoration: none; 
     min-width: 3em; 
     display: inline-block;
@@ -107,22 +149,32 @@ div.position-0 {
     background: #0073B4;
 }
 
+#portaltab-registration {
+	float: right;
+}
+#portaltab-registration a {
+	background: #336600;
+}
+
 
 /****************** CONTENT ******************/
 
-/* Text styles */
-#content .documentDescription, #content #description,
-#content div.documentByLine,
-#content .discreet, #sidebar .discreet {
-	color: #eaffff;
+/* Home */
+.section-front-page h2 {
+	background: transparent url(src/header.png) center repeat-x;
+	text-align: center;
 }
-.pb-ajax, .pb-image, .overlay iframe {
-	background-color: #336699;
+.section-front-page h2 span {
+	background: #fff url(src/background.jpg);
+	padding: 0 1em;
 }
 
-.breadcrumbSeparator {
-    color: #eaffff;
+.section-front-page h1.documentFirstHeading,
+.section-front-page #portal-breadcrumbs {
+	display: none;
 }
+
+/* Text styles */
 
 .hidden {
     display: none;
@@ -135,14 +187,6 @@ div.position-0 {
 }
 .portlet img, #content img {
     max-width:100%;
-}
-
-table.grid td, table.grid th {
-    border: 1px solid #eaffff;
-    padding: 0.5em;
-}
-table.listing th {
-	background: #eaffff;
 }
 
 /* lists */
@@ -160,35 +204,13 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 }
 
 /****************** PORTLETS ********************/
-dl.portlet dt, div.portletAssignments div.portletHeader {
-	background: #336699;
-	color: #fff;
-}
 
-.portlet-static-fotos img {
-	border-radius: 5px; 
-   -moz-border-radius: 5px; 
-   -webkit-border-radius: 5px; 
-   border: 0px solid #FFFFFF;
-}
+
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    border-bottom: 0.1em solid #238dc3;
+    border-bottom: 1px solid #f1f1f1;
 }
 
-dl.portlet ul.navTree .navTreeCurrentItem {
-    background-color: #238dc3;
-    border-left: none;
-	 padding-left: 1em;
-}
-
-div.managePortletsLink, a.managePortletsFallback {
-	background: #336699;
-}
-
-dl.portalMessage {
-	color: #000; 
-}
 
 select {
 	max-width: 100%;
@@ -199,8 +221,8 @@ select {
 #footer {
     background: #0079b9; 
 	 color: #eaffff;
-	 border-bottom: 1px solid #238dc3;
-	 border-top: 1px solid #238dc3;
+	 clear: left; 
+	 padding: 2em;
 }
 #footer a:link {
     color:#eaffff;
@@ -211,15 +233,33 @@ select {
 #footer a:hover {
     color: #fff !important;
 }
-#footer {
-    clear: left; 
-	 padding: 1em 0;
+#social {
+	width: 70%;
+	float: right;
+	text-align: right;
 }
 
-/* Site Actions */
-#portal-siteactions {
-    text-align: left; 
-	 display:inline;
+#footer-logo {
+	width: 30%;
+}
+#footer-logo img {
+	width: 100%;
+}
+
+#footer-nav {
+	width: 70%;
+	float: right;
+	clear: right;
+	text-align: right;
+	margin-top: 9em;
+}
+
+#footer li {
+	float: none;
+	padding: 1em;
+}
+#footer li a {
+	background: transparent;
 }
 
 

@@ -28,8 +28,7 @@
     <copy attributes="href title" css:content="#portal-logo" css:theme="#logo a" />
     <replace css:content="#portal-header p.hiddenStructure" css:theme="#accessibility" /> 
     <replace css:content="#portal-globalnav li" css:theme-children="#nav ul" />
-    <replace css:content-children="#portal-footer" css:theme="#footer-info" />   
-    <replace css:content="#portal-siteactions" css:theme-children="#siteactions" />  
+    <replace css:content-children="#portal-globalnav" css:theme-children="#footer-nav" />   
     <after css:content="#portal-languageselector" css:theme="#logo" />    
 
     <!--Portlets-->
