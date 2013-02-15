@@ -206,11 +206,14 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 /****************** PORTLETS ********************/
 
 
-
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #ccc;
+	 font-size: 1.3em;
 }
 
+dl.portlet ul.navTree li a {
+    color: #0079b9 !important;
+}
 
 select {
 	max-width: 100%;
@@ -271,7 +274,16 @@ select {
 @media screen and (max-width: 768px) {
 
 	#wrapper {max-width: 100%;}
-	#logo {min-width:140px;}	
+	#logo {width: 49%;}	
+	.header-photos, #header-text {
+	width: 49%;
+	float: left;
+	margin-bottom: 0.2%;
+	}
+	#footer-logo, #footer-nav, #photo02, #photo03 {
+		display: none;
+	}
+	
 	
 	/*Columns*/
 	#portal-column-one, 
@@ -285,7 +297,7 @@ select {
 	#nav {padding:0;width:100%;
 	}
 	
-	#searchbt {display:block; float:right;width:14%;}
+	#searchbt {display:block; float:right;width:14%;clear: left;}
 	
 	#searchbt a {
 		display:block;
@@ -343,6 +355,7 @@ select {
 
 }
 
+	
 @media screen and (max-width: 480px) {
 
 	#portal-breadcrumbs {display:none;}
@@ -352,5 +365,13 @@ select {
         width:80%;
 		clear:both;
 		margin: 0 auto 2%;
+   }
+	#logo {
+		float: none;
+		width: 100%;
+	}
+	.header-photos,
+   #header-text {
+	display: none;
    }
 }
