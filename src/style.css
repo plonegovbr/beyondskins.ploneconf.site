@@ -309,9 +309,9 @@ select {
 	
 	#nav #seletor {
 		display:block;
-		padding:1em;
+		padding: 1em 1em 1em 2.5em;
 		width:80%;
-		background:url("sections-ico.png") no-repeat 97% 60%;
+		background:url("sections-ico.png") no-repeat 92% 40%;
 	 }
 	
 	#nav li {display: none;}
