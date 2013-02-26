@@ -360,6 +360,8 @@ select {
 
 	#portal-breadcrumbs {display:none;}
 	
+	#nav ul {font-size: 1em;}
+	
 	#portal-searchbox {
 	    float: none;
         width:80%;
