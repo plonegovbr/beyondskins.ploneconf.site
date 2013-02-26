@@ -311,7 +311,7 @@ select {
 		display:block;
 		padding: 1em 1em 1em 2.5em;
 		width:80%;
-		background:url("sections-ico.png") no-repeat 92% 40%;
+		background:url("sections-ico.png") no-repeat 1em;
 	 }
 	
 	#nav li {display: none;}
@@ -339,7 +339,7 @@ select {
       width: 95% !important;
 	}
 	
-	#nav:hover li:hover {background: #eaffff;}
+	#nav:hover li:hover {background: #254A6E;}
 	#nav:hover li a:hover,
 	#nav:hover li.selected a {background: transparent;}
 	
