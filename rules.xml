@@ -4,6 +4,7 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <theme href="home.html" css:if-content=".section-front-page" />
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
 
     <!--Plone.app.toolbar-->
